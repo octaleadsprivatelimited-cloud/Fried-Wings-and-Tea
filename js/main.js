@@ -1,98 +1,120 @@
 const menuItems = [
-    // Signature Teas
-    { name: "Dhum Tea", category: "Signature Teas", description: "Smoky kadak chai finished in clay pot dhum style.", price: "₹10" },
-    { name: "Ginger Tea", category: "Signature Teas", description: "Strong milk tea simmered with fresh ginger shavings.", price: "₹20" },
-    { name: "Bellam Tea", category: "Signature Teas", description: "Jaggery-sweetened chai with earthy caramel notes.", price: "₹20" },
-    { name: "Elachi Tea", category: "Signature Teas", description: "Cardamom infused chai, fragrant and refreshing.", price: "₹20" },
-    { name: "Ginger Bellam Tea", category: "Signature Teas", description: "Fresh ginger and jaggery chai with warm spice.", price: "₹20" },
-    { name: "Black Pepper Tea", category: "Signature Teas", description: "Peppercorn-spiced chai for a bold kick.", price: "₹20" },
-    { name: "Masala Tea", category: "Signature Teas", description: "House masala blend simmered slow for depth.", price: "₹20" },
-    { name: "Paan Tea", category: "Signature Teas", description: "Unique paan-inspired chai with minty sweetness.", price: "₹20" },
-    { name: "Black Tea", category: "Signature Teas", description: "Classic kadak black tea without milk.", price: "₹15" },
-    { name: "Sugar Less Tea", category: "Signature Teas", description: "Robust chai brewed without sugar, customisable.", price: "₹15" },
-
-    // Thickshakes
-    { name: "Vanilla", category: "Thickshakes", description: "Creamy vanilla thickshake.", price: "₹149" },
-    { name: "Strawberry", category: "Thickshakes", description: "Sweet strawberry thickshake.", price: "₹149" },
-    { name: "Butter Scotch", category: "Thickshakes", description: "Rich butterscotch thickshake.", price: "₹149" },
-    { name: "Oreo Chocolate", category: "Thickshakes", description: "Chocolate thickshake with Oreo crunch.", price: "₹159" },
-    { name: "Oreo Vanilla", category: "Thickshakes", description: "Vanilla thickshake blended with Oreo.", price: "₹159" },
-    { name: "Dry Fruit", category: "Thickshakes", description: "Thickshake loaded with roasted dry fruits.", price: "₹169" },
-    { name: "Belgium Chocolate", category: "Thickshakes", description: "Decadent Belgian chocolate thickshake.", price: "₹169" },
-
-    // Hot Milk
-    { name: "Plain Milk", category: "Hot Milk", description: "Hot steamed milk served fresh.", price: "₹35" },
-    { name: "Badam Milk", category: "Hot Milk", description: "Almond-saffron infused hot milk.", price: "₹45" },
-    { name: "Coffee", category: "Hot Milk", description: "Classic filter coffee with frothy milk.", price: "₹40" },
-    { name: "Black Coffee", category: "Hot Milk", description: "Strong decoction served without milk.", price: "₹30" },
-    { name: "Boost", category: "Hot Milk", description: "Boost energy drink blended into hot milk.", price: "₹45" },
-    { name: "Horlicks", category: "Hot Milk", description: "Malted Horlicks mix with hot milk.", price: "₹45" },
-    { name: "Pepper Milk", category: "Hot Milk", description: "Comforting pepper-spiced hot milk.", price: "₹40" },
-    { name: "Chocolate Tea", category: "Hot Milk", description: "Hot chocolate chai fusion.", price: "₹40" },
-
-    // Lassis
-    { name: "Sweet Lassi", category: "Lassi", description: "Classic sweet curd blend with malai.", price: "₹69" },
-    { name: "Rose Lassi", category: "Lassi", description: "Rose syrup lassi topped with pistachio dust.", price: "₹79" },
-    { name: "Mango Lassi", category: "Lassi", description: "Alphonso mango pulp blended with chilled lassi.", price: "₹79" },
-    { name: "Dry Fruit Lassi", category: "Lassi", description: "Loaded with roasted dry fruits and saffron.", price: "₹89" },
-    { name: "Rooh Afza Lassi", category: "Lassi", description: "Refreshing Rooh Afza twist on classic lassi.", price: "₹79" },
+    // Teas
+    { name: "Dhum Tea", category: "Teas", description: "Clay-pot dhum brewed kadak chai.", price: "₹10" },
+    { name: "Bellam Tea", category: "Teas", description: "Jaggery-sweetened milk tea with caramel notes.", price: "₹20" },
+    { name: "Ginger Tea", category: "Teas", description: "Bold chai simmered with fresh ginger.", price: "₹20" },
+    { name: "Badam Tea", category: "Teas", description: "Almond-rich chai with saffron warmth.", price: "₹20" },
+    { name: "Masala Tea", category: "Teas", description: "House spice blend slow brewed for depth.", price: "₹20" },
+    { name: "Elachi Tea", category: "Teas", description: "Fragrant cardamom-forward tea.", price: "₹20" },
+    { name: "Paan Tea", category: "Teas", description: "Minty paan inspired milk tea.", price: "₹20" },
+    { name: "Black Pepper Tea", category: "Teas", description: "Peppercorn-spiked chai for a spicy kick.", price: "₹20" },
+    { name: "Black Tea", category: "Teas", description: "Straight-up kadak black brew.", price: "₹15" },
+    { name: "Sonti Tea", category: "Teas", description: "Dry ginger (sonti) chai to warm the soul.", price: "₹20" },
+    { name: "Sugar Less Tea", category: "Teas", description: "Milk tea brewed without sugar.", price: "₹15" },
+    { name: "Rose Tea", category: "Teas", description: "Floral rose petal infused chai.", price: "₹20" },
+    { name: "Chocolate Tea", category: "Teas", description: "Hot cocoa meets kadak chai.", price: "₹20" },
 
     // Wellness Teas
-    { name: "Hibiscus Tea", category: "Wellness Teas", description: "Tangy hibiscus infusion full of antioxidants.", price: "₹20" },
-    { name: "Lemon Tea", category: "Wellness Teas", description: "Zesty lemon tea served hot and refreshing.", price: "₹20" },
-    { name: "Ginger Lemon Tea", category: "Wellness Teas", description: "Immune-boosting ginger and lemon infusion.", price: "₹15" },
-    { name: "Green Tea", category: "Wellness Teas", description: "Classic green tea brewed light.", price: "₹15" }
-,
+    { name: "Green Tea", category: "Wellness Teas", description: "Lightly brewed antioxidant-rich tea.", price: "₹20" },
+    { name: "Hibiscus Tea", category: "Wellness Teas", description: "Tangy hibiscus tisane served hot.", price: "₹20" },
+    { name: "Lemon Tea", category: "Wellness Teas", description: "Zesty lemon lift with gentle sweetness.", price: "₹20" },
+    { name: "Ginger Lemon Tea", category: "Wellness Teas", description: "Immune loving ginger and lemon infusions.", price: "₹20" },
 
     // Mocktails
-    { name: "Lemon Mojito", category: "Mocktails", description: "Fresh lemon, mint, and soda fizz.", price: "₹109" },
-    { name: "Virgin Mojito", category: "Mocktails", description: "Classic mint mojito without alcohol.", price: "₹119" },
-    { name: "Blue Lagoon", category: "Mocktails", description: "Blue curacao inspired cooler.", price: "₹129" },
-    { name: "Red Wine Cooler", category: "Mocktails", description: "Non-alcoholic red wine style spritzer.", price: "₹129" },
-    { name: "Water Melon Cooler", category: "Mocktails", description: "Chilled watermelon crush with lime.", price: "₹109" },
-    { name: "Orange Mojito", category: "Mocktails", description: "Minty orange cooler with soda.", price: "₹119" },
+    { name: "Lemon Mojito", category: "Mocktails", description: "Mint, lime and fizz over crushed ice.", price: "₹50" },
+    { name: "Virgin Mojito", category: "Mocktails", description: "Classic mojito profile minus the alcohol.", price: "₹50" },
+    { name: "Watermelon Cooler", category: "Mocktails", description: "Fresh watermelon crush with mint.", price: "₹50" },
+    { name: "Red Wine Mocktail", category: "Mocktails", description: "Grape and berry spritzer styled like wine.", price: "₹60" },
+    { name: "Blue Lagoon", category: "Mocktails", description: "Citrus and blue curacao inspired refresher.", price: "₹50" },
+    { name: "Orange Mojito", category: "Mocktails", description: "Sunny orange twist on the mojito.", price: "₹50" },
+    { name: "Strawberry Spritzer", category: "Mocktails", description: "Strawberry, lime and soda sparkle.", price: "₹50" },
 
-    // Veg Sandwiches
-    { name: "Paneer Sandwich", category: "Veg Sandwiches", description: "Grilled paneer sandwich with masala filling.", price: "₹129" },
-    { name: "Mushroom Sandwich", category: "Veg Sandwiches", description: "Sautéed mushroom and cheese sandwich.", price: "₹129" },
-    { name: "Mexican Street Sandwich", category: "Veg Sandwiches", description: "Spiced bean mash, peppers, cheese, FWNT sauce.", price: "₹139" },
-    { name: "Smoky BBQ Veg Sandwich", category: "Veg Sandwiches", description: "BBQ glaze, charred corn, jalapeño, cheese melt.", price: "₹149" },
+    // Milk & Coffees
+    { name: "Badam Milk", category: "Milk & Coffee", description: "Almond-saffron milk served hot.", price: "₹20" },
+    { name: "Boost Milk", category: "Milk & Coffee", description: "Classic Boost stirred into hot milk.", price: "₹20" },
+    { name: "Horlicks", category: "Milk & Coffee", description: "Malted Horlicks beverage.", price: "₹20" },
+    { name: "Pepper Milk", category: "Milk & Coffee", description: "Comforting pepper spiced milk.", price: "₹20" },
+    { name: "Chocolate Milk", category: "Milk & Coffee", description: "Creamy cocoa milk.", price: "₹20" },
+    { name: "Rose Milk", category: "Milk & Coffee", description: "Rose syrup, chilled milk and nuts.", price: "₹20" },
+    { name: "Bru Coffee", category: "Milk & Coffee", description: "South Indian style instant coffee.", price: "₹20" },
+    { name: "Black Coffee", category: "Milk & Coffee", description: "Strong decoction without milk.", price: "₹20" },
 
-    // Non-Veg Sandwiches
-    { name: "Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Grilled chicken sandwich with house dressing.", price: "₹149" },
-    { name: "Crispy Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Crispy fried chicken stuffed sandwich.", price: "₹159" },
-    { name: "Mexican Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Spicy grilled chicken, chipotle mayo, pickled onions.", price: "₹169" },
-    { name: "Smoky BBQ Chicken Sandwich", category: "Non-Veg Sandwiches", description: "BBQ chicken, cheddar, caramelised onions, FWNT sauce.", price: "₹179" },
-    { name: "Tandoori Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Tandoori marinated chicken sandwich.", price: "₹169" },
+    // Milkshakes (₹59/₹69 deck)
+    { name: "Rosey Rose Milkshake", category: "Milkshakes", description: "Signature rose ice-cream shake.", price: "₹59" },
+    { name: "Vanilla Milkshake", category: "Milkshakes", description: "Classic vanilla scoop shake.", price: "₹59" },
+    { name: "Oreo Chocolate Milkshake", category: "Milkshakes", description: "Chocolate shake blitzed with Oreos.", price: "₹59" },
+    { name: "Oreo Vanilla Milkshake", category: "Milkshakes", description: "Vanilla shake with Oreo crumble.", price: "₹59" },
+    { name: "Butterscotch Milkshake", category: "Milkshakes", description: "Caramel-butterscotch shake.", price: "₹59" },
+    { name: "Badam Shake", category: "Milkshakes", description: "Almond loaded thick milkshake.", price: "₹59" },
+    { name: "Strawberry Milkshake", category: "Milkshakes", description: "Fresh strawberry cream shake.", price: "₹59" },
+    { name: "Cold Coffee Shake", category: "Milkshakes", description: "Iced coffee blended with ice cream.", price: "₹59" },
+    { name: "Rose Pan Shake", category: "Milkshakes", description: "Paan and gulkand inspired shake.", price: "₹59" },
+    { name: "Chocolate Shake", category: "Milkshakes", description: "Silky chocolate milkshake.", price: "₹59" },
+    { name: "Dry Fruit Shake", category: "Milkshakes", description: "Cashew, almond and pista crunch.", price: "₹69" },
+    { name: "Mango Shake", category: "Milkshakes", description: "Seasonal mango indulgence.", price: "₹59" },
+    { name: "Watermelon Shake", category: "Milkshakes", description: "Juicy watermelon blended cold.", price: "₹59" },
+    { name: "Black Currant Shake", category: "Milkshakes", description: "Black currant ice cream shake.", price: "₹59" },
+    { name: "KitKat Shake", category: "Milkshakes", description: "Crunchy KitKat blended shake.", price: "₹59" },
+    { name: "Dairy Milk Shake", category: "Milkshakes", description: "Cadbury Dairy Milk studded shake.", price: "₹69" },
 
-    // Chicken Wings
-    { name: "Chicken Wings 2 Piece", category: "Chicken Wings", description: "2-piece crispy chicken wings.", price: "₹49" },
-    { name: "Chicken Wings 4 Piece", category: "Chicken Wings", description: "4-piece crispy chicken wings.", price: "₹99" },
-    { name: "Chicken Wings 6 Piece", category: "Chicken Wings", description: "6-piece crispy chicken wings.", price: "₹129" },
+    // Thick Shakes
+    { name: "Vanilla Thick Shake", category: "Thick Shakes", description: "Dense vanilla thick shake.", price: "₹69" },
+    { name: "Strawberry Thick Shake", category: "Thick Shakes", description: "Rich strawberry thick blend.", price: "₹69" },
+    { name: "Butterscotch Thick Shake", category: "Thick Shakes", description: "Slow churned butterscotch indulgence.", price: "₹69" },
+    { name: "Oreo Chocolate Thick Shake", category: "Thick Shakes", description: "Extra creamy Oreo chocolate shake.", price: "₹69" },
+    { name: "Oreo Vanilla Thick Shake", category: "Thick Shakes", description: "Dense vanilla shake studded with Oreos.", price: "₹69" },
+    { name: "Dry Fruit Thick Shake", category: "Thick Shakes", description: "Loaded with roasted nuts and khoya.", price: "₹79" },
+    { name: "Belgium Chocolate Thick Shake", category: "Thick Shakes", description: "Belgian cocoa rich thick shake.", price: "₹79" },
 
-    // Chicken Legs
-    { name: "Chicken Legs 2 Piece", category: "Chicken Legs", description: "2-piece crunchy chicken legs.", price: "₹79" },
-    { name: "Chicken Legs 4 Piece", category: "Chicken Legs", description: "4-piece crunchy chicken legs.", price: "₹149" },
-    { name: "Chicken Legs 6 Piece", category: "Chicken Legs", description: "6-piece crunchy chicken legs.", price: "₹199" },
-
-    // Chicken Lollipop
-    { name: "Chicken Lollipop 2 Piece", category: "Chicken Lollipop", description: "2-piece chicken lollipop.", price: "₹69" },
-    { name: "Chicken Lollipop 4 Piece", category: "Chicken Lollipop", description: "4-piece chicken lollipop.", price: "₹129" },
-    { name: "Chicken Lollipop 6 Piece", category: "Chicken Lollipop", description: "6-piece chicken lollipop.", price: "₹189" },
-
-    // Chicken Strips
-    { name: "Chicken Strips 2 Piece", category: "Chicken Strips", description: "2-piece crispy chicken strips.", price: "₹59" },
-    { name: "Chicken Strips 4 Piece", category: "Chicken Strips", description: "4-piece crispy chicken strips.", price: "₹119" },
-    { name: "Chicken Strips 6 Piece", category: "Chicken Strips", description: "6-piece crispy chicken strips.", price: "₹179" },
+    // Lassi
+    { name: "Sweet Lassi", category: "Lassi", description: "Classic sweetened yoghurt drink.", price: "₹50" },
+    { name: "Rose Lassi", category: "Lassi", description: "Rose-syrup perfumed lassi.", price: "₹50" },
+    { name: "Mango Lassi", category: "Lassi", description: "Alphonso mango blended lassi.", price: "₹50" },
+    { name: "Dry Fruit Lassi", category: "Lassi", description: "Dry fruit loaded creamy lassi.", price: "₹60" },
 
     // Snacks
-    { name: "French Fries", category: "Snacks", description: "Crispy golden french fries.", price: "₹99" },
-    { name: "Veg Nuggets", category: "Snacks", description: "Crumb-fried vegetable nuggets.", price: "₹119" },
-    { name: "Veg Fingers", category: "Snacks", description: "Crispy veg finger bites with herbs.", price: "₹119" },
-    { name: "Potato Pops", category: "Snacks", description: "Cheesy potato poppers.", price: "₹109" },
-    { name: "Chicken Nuggets", category: "Snacks", description: "Classic chicken nuggets with dip.", price: "₹139" },
-    { name: "Chicken Popcorn", category: "Snacks", description: "Crunchy chicken popcorn bites.", price: "₹139" },
-    { name: "Oats Meal", category: "Snacks", description: "Hearty savoury oats bowl.", price: "₹129" }
+    { name: "French Fries", category: "Snacks", description: "Golden fries with house seasoning.", price: "₹59" },
+    { name: "Veg Nuggets", category: "Snacks", description: "Crispy crumbed veg bites.", price: "₹59" },
+    { name: "Veg Fingers", category: "Snacks", description: "Herbed veg finger fritters.", price: "₹59" },
+    { name: "Potato Pops", category: "Snacks", description: "Cheesy potato poppers.", price: "₹59" },
+    { name: "Chicken Nuggets", category: "Snacks", description: "Juicy chicken nuggets with dip.", price: "₹79" },
+    { name: "Chicken Popcorn", category: "Snacks", description: "Crispy chicken popcorn bites.", price: "₹89" },
+    { name: "Osmania Biscuits", category: "Snacks", description: "Hyderabadi tea-time classic.", price: "₹5" },
+    { name: "Samosa", category: "Snacks", description: "Mini samosas fried crisp.", price: "₹5" },
+    { name: "Oats Meal Bowl", category: "Snacks", description: "Savory oats with veggies.", price: "₹50" },
+
+    // Veg Sandwiches
+    { name: "Paneer Sandwich", category: "Veg Sandwiches", description: "Grilled paneer tikka filling.", price: "₹69" },
+    { name: "Mushroom Sandwich", category: "Veg Sandwiches", description: "Butter sautéed mushrooms with cheese.", price: "₹69" },
+    { name: "Mexican Pizza Sandwich", category: "Veg Sandwiches", description: "Beans, peppers and cheese melt.", price: "₹69" },
+    { name: "Mexican BBQ Pizza Sandwich", category: "Veg Sandwiches", description: "BBQ glaze, veggies and cheese.", price: "₹69" },
+
+    // Non-Veg Sandwiches
+    { name: "Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Grilled chicken with house sauce.", price: "₹79" },
+    { name: "Crispy Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Crispy fried chicken stuffed buns.", price: "₹79" },
+    { name: "Mexican Chicken Pizza Sandwich", category: "Non-Veg Sandwiches", description: "Spicy Mexican chicken filling.", price: "₹79" },
+    { name: "Mexican BBQ Chicken Pizza Sandwich", category: "Non-Veg Sandwiches", description: "BBQ chicken, cheese and jalapeños.", price: "₹79" },
+    { name: "Tandoori Chicken Sandwich", category: "Non-Veg Sandwiches", description: "Smoky tandoori chicken sandwich.", price: "₹79" },
+
+    // Chicken Wings
+    { name: "Chicken Wings (2 Piece)", category: "Chicken Wings", description: "Two-piece crispy wings.", price: "₹49" },
+    { name: "Chicken Wings (4 Piece)", category: "Chicken Wings", description: "Four-piece crispy wings.", price: "₹99" },
+    { name: "Chicken Wings (6 Piece)", category: "Chicken Wings", description: "Six-piece crispy wings.", price: "₹129" },
+
+    // Chicken Legs
+    { name: "Chicken Legs (2 Piece)", category: "Chicken Legs", description: "Two crunchy chicken drumsticks.", price: "₹79" },
+    { name: "Chicken Legs (4 Piece)", category: "Chicken Legs", description: "Four crunchy chicken drumsticks.", price: "₹149" },
+    { name: "Chicken Legs (6 Piece)", category: "Chicken Legs", description: "Six crunchy chicken drumsticks.", price: "₹199" },
+
+    // Chicken Lollipop
+    { name: "Chicken Lollipop (2 Piece)", category: "Chicken Lollipop", description: "Two drumette-style lollipops.", price: "₹69" },
+    { name: "Chicken Lollipop (4 Piece)", category: "Chicken Lollipop", description: "Four drumette-style lollipops.", price: "₹129" },
+    { name: "Chicken Lollipop (6 Piece)", category: "Chicken Lollipop", description: "Six drumette-style lollipops.", price: "₹189" },
+
+    // Chicken Strips
+    { name: "Chicken Strips (2 Piece)", category: "Chicken Strips", description: "Two breaded chicken strips.", price: "₹59" },
+    { name: "Chicken Strips (4 Piece)", category: "Chicken Strips", description: "Four breaded chicken strips.", price: "₹119" },
+    { name: "Chicken Strips (6 Piece)", category: "Chicken Strips", description: "Six breaded chicken strips.", price: "₹179" }
 ];
 
 const navToggle = document.getElementById("navToggle");
