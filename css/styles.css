@@ -1665,6 +1665,11 @@ textarea:focus {
         padding: 0.7rem 0.9rem;
     }
 
+    /* Hide decorative cup/steam icon on mobile header */
+    .nav__icon {
+        display: none;
+    }
+
     /* Hide non-highlight CTA (Explore Menu) on small screens */
     .nav__ctas .nav__cta:not(.nav__cta--highlight) {
         display: none;
@@ -1687,6 +1692,14 @@ textarea:focus {
     .nav__icon {
         width: 28px;
         height: 24px;
+    }
+
+    /* Make highlight CTA more compact on mobile */
+    .nav__cta--highlight {
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+        padding: 0.5rem 0.9rem;
+        box-shadow: 0 10px 20px rgba(255, 107, 61, 0.35);
     }
 
     .nav__icon .cup {
