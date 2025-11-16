@@ -1559,6 +1559,17 @@ textarea:focus {
 
 /* Responsive adjustments */
 @media (max-width: 960px) {
+    /* Hide non-highlight CTA (Explore Menu) on all mobile/tablet widths */
+    .nav__ctas .nav__cta:not(.nav__cta--highlight) {
+        display: none;
+    }
+
+    /* Compact top header for mobile/tablet */
+    .top-bar {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.78rem;
+    }
+
     .nav__links {
         position: absolute;
         top: 100%;
@@ -1652,6 +1663,21 @@ textarea:focus {
 @media (max-width: 640px) {
     .nav {
         padding: 0.7rem 0.9rem;
+    }
+
+    /* Hide non-highlight CTA (Explore Menu) on small screens */
+    .nav__ctas .nav__cta:not(.nav__cta--highlight) {
+        display: none;
+    }
+
+    /* Compact top header on mobile */
+    .top-bar {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.74rem;
+    }
+
+    .top-bar__contact {
+        gap: 0.5rem;
     }
 
     .nav__logo {
